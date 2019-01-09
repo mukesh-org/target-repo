@@ -2,7 +2,7 @@
 
 #!/bin/sh
 
-git remote add origin https://github.com/mukesh-org/config-repo.git
+git remote add origin git@github.com:mukesh-org/config-repo.git
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
 branch=$(date +%s)
