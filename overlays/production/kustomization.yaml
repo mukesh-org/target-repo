@@ -42,7 +42,7 @@ spec:
         app: kustomize-test
     spec:
       containers:
-      - image: gcr.io/searce-sandbox/abc:14f1bae
+      - image: gcr.io/searce-sandbox/abc:a8bcefb
         name: kustomize-test
         ports:
         - containerPort: 80
