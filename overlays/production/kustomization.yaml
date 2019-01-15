@@ -124,7 +124,7 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: /var/www/mysql-secret
+        - mountPath: /var/www/html
           name: shared-data
       serviceAccountName: vault-auth
       volumes:
