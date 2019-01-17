@@ -13,9 +13,9 @@ data:
 
     auto_auth {
         method "kubernetes" {
-            mount_path = "auth/kubernetes"
+            mount_path = "auth/my=kube"
             config = {
-                role = "agent-role"
+                role = "agent-role1"
             }
         }
 
