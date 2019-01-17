@@ -3,7 +3,7 @@ data:
   consul-template-config.hcl: "vault {\n  renew_token = false\n  retry {\n    backoff
     = \"1s\"\n  }\n}\n\ntemplate {\n  destination = \"/etc/secrets/index.html\"\n
     \ contents = <<EOH\n  <html>\n  <body>\n  <p>Some secrets:</p>\n  {{- with secret
-    \"secret/myapp/config\" }}\n  <ul>\n  <li><pre>username: {{ .Data.username }}</pre></li>\n
+    \"secret/myapp1/config\" }}\n  <ul>\n  <li><pre>username: {{ .Data.username }}</pre></li>\n
     \ <li><pre>password: {{ .Data.password }}</pre></li>\n  </ul>\n  {{ end }}\n  </body>\n
     \ </html>  \n  EOH\n}\n"
   vault-agent-config.hcl: |
