@@ -64,7 +64,7 @@ spec:
         - -config=/etc/vault/vault-agent-config.hcl
         env:
         - name: VAULT_ADDR
-          value: https://35.200.228.121:443
+          value: https://35.244.30.250:443
         - name: VAULT_CACERT
           value: /etc/vault/tls/ca.crt
         - name: VAULT_ROLE
@@ -84,7 +84,7 @@ spec:
         - name: HOME
           value: /home/vault
         - name: VAULT_ADDR
-          value: https://35.200.228.121:443
+          value: https://35.244.30.250:443
         - name: VAULT_CACERT
           value: /etc/vault/tls/ca.crt
         image: hashicorp/consul-template
@@ -99,7 +99,7 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-sandbox/abc:51be582
+      - image: gcr.io/searce-sandbox/abc:0db7e18
         name: kustomize-test
         ports:
         - containerPort: 80
