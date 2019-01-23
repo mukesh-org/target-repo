@@ -8,7 +8,7 @@ data:
     \ </html>  \n  EOH\n}\n"
   vault-agent-config.hcl: |
     # Uncomment this to have Agent run once (e.g. when running as an initContainer)
-    # exit_after_auth = true
+    exit_after_auth = true
     pid_file = "/home/vault/pidfile"
 
     auto_auth {
@@ -99,7 +99,7 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-sandbox/abc:0db7e18
+      - image: gcr.io/searce-sandbox/abc:ab94046
         name: kustomize-test
         ports:
         - containerPort: 80
