@@ -5,7 +5,7 @@
 git remote add origin git@github.com:mukesh-org/config-repo.git
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
-branch=$(date +%s)
+branch=$(PR-name)
 git checkout -b "$branch"
 git add .
 git commit -m 'kustomize file updated'
