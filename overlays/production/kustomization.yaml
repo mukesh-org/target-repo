@@ -99,7 +99,7 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-sandbox/abc:ab94046
+      - image: gcr.io/searce-sandbox/abc:d4a2a82
         name: kustomize-test
         ports:
         - containerPort: 80
