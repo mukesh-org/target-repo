@@ -2,6 +2,10 @@
 
 #!/bin/sh
 
+cp /secrets/flux/id_rsa /root/.ssh/id_rsa
+chmod 600 /root/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa
+
 git remote add origin git@github.com:mukesh-org/config-repo.git
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
