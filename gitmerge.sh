@@ -17,3 +17,4 @@ git merge FETCH_HEAD
 
 git checkout master
 git merge --no-ff "$branch"
+git push -u origin master
