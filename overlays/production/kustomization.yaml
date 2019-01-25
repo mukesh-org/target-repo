@@ -59,7 +59,7 @@ spec:
         app: kustomize-test
     spec:
       containers:
-      - image: gcr.io/searce-sandbox/abc:08ad97f
+      - image: gcr.io/searce-sandbox/abc:a4183ec
         name: php-apache
         ports:
         - containerPort: 80
