@@ -2,7 +2,7 @@
 
 #!/bin/sh
 
-git remote add origin git@github.com:mukesh-org/config-repo.git
+git remote add origin git@github.com:$GITHUB_ORG_NAME/$TARGET_REPO_NAME.git
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
 branch=$PULL_NUMBER
