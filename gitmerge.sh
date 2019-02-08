@@ -1,7 +1,6 @@
 ### Shell script for performing GitHub merge commands to master branch ###
 
 #!/bin/sh
-set -e
 
 mkdir -p /root/.ssh
 chmod 700 /root/.ssh
