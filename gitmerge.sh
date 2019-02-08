@@ -6,15 +6,15 @@ set -e
 mkdir /root/.ssh
 chmod 700 /root/.ssh
 
-cp /secrets/git/target_ssh_secret /root/.ssh/target_ssh_secret
-chmod 600 /root/.ssh/target_ssh_secret
-ssh-add /root/.ssh/target_ssh_secret
+cp /secrets/git/targetgit-ssh-secret /root/.ssh/targetgit-ssh-secret
+chmod 600 /root/.ssh/targetgit-ssh-secret
+ssh-add /root/.ssh/targetgit-ssh-secret
 
 cat <<\EOF >> ~/.ssh/config
 Host $TARGET_REPO_NAME github.com
 	HostName github.com
 	User git
-	IdentityFile ~/.ssh/target_ssh_secret
+	IdentityFile ~/.ssh/targetgit-ssh-secret
 EOF
 chmod 400 ~/.ssh/config
 
