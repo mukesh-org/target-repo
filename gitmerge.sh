@@ -24,9 +24,10 @@ ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 branch="$PULL_NUMBER"
 
 ## resolve any merge conflicts if there are any
-git fetch origin master
-git merge FETCH_HEAD
-
+git checkout "$branch"
+git pull
 git checkout master
-git merge --no-ff "$branch"
+git merge --no-ff --no-commit "$branch"
+git status
+git commit -m 'merge $branch branch'
 git push -u origin master
