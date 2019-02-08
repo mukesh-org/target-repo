@@ -18,6 +18,9 @@ Host $TARGET_REPO_NAME github.com
 EOF
 chmod 400 ~/.ssh/config
 
+git config --global user.email "you@example.com"
+git config --global user.name "ci-robot"
+
 git remote add origin git@github.com:"$GITHUB_ORG_NAME"/"$TARGET_REPO_NAME".git
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
