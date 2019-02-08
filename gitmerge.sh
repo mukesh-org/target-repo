@@ -1,12 +1,14 @@
 ### Shell script for performing GitHub merge commands to master branch ###
 
 #!/bin/sh
+set -e
 
 mkdir -p /root/.ssh
 chmod 700 /root/.ssh
 
 cp /secrets/git/targetgit-ssh-secret /root/.ssh/targetgit-ssh-secret
 chmod 600 /root/.ssh/targetgit-ssh-secret
+exec ssh-agent bash
 ssh-add /root/.ssh/targetgit-ssh-secret
 
 cat <<\EOF >> ~/.ssh/config
