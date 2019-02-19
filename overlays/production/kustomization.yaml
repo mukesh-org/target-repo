@@ -29,9 +29,13 @@ spec:
     spec:
       containers:
 <<<<<<< HEAD
+<<<<<<< HEAD
       - image: gcr.io/searce-sandbox/abc:6795353-dirty-24mukesh
 =======
       - image: gcr.io/searce-sandbox/abc:f68fa02-dirty-135fb55
+>>>>>>> source-PR-71
+=======
+      - image: gcr.io/searce-sandbox/abc:1e6829b-dirty-615c7bb
 >>>>>>> source-PR-71
         name: php-apache
         ports:
