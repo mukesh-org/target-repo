@@ -117,7 +117,7 @@ spec:
             path: vault-agent-config.hcl
           - key: consul-template-config.hcl
             path: consul-template-config.hcl
-          name: example-vault-agent-config
+          name: vault-agent-config
         name: config
       - emptyDir: {}
         name: shared-data
