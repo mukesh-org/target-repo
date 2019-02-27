@@ -99,12 +99,12 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: nginx
-        name: kustomize-test
+      - image: gcr.io/searce-sandbox/abc:1a55d31-dirty-da2dff3
+        name: php-apache
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: /usr/share/nginx/html
+        - mountPath: /var/www/html
           name: shared-data
       serviceAccountName: vault-auth
       volumes:
