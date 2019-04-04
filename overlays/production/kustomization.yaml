@@ -62,6 +62,7 @@ spec:
       - args:
         - agent
         - -config=/etc/vault/vault-agent-config.hcl
+        - -log-level=debug
         env:
         - name: VAULT_ADDR
           value: https://35.193.0.64:443
@@ -80,6 +81,7 @@ spec:
           name: vault-tls
       - args:
         - -config=/etc/consul-template/consul-template-config.hcl
+        - -log-level=debug
         env:
         - name: HOME
           value: /home/vault
@@ -104,7 +106,7 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: /var/www/html
+        - mountPath: /usr/share/nginx/html
           name: shared-data
       serviceAccountName: vault-auth
       volumes:
