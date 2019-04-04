@@ -73,6 +73,7 @@ spec:
           value: agent-role
         image: vault
         name: vault-agent-auth
+        resources: {}
         volumeMounts:
         - mountPath: /home/vault
           name: vault-token
@@ -93,6 +94,7 @@ spec:
         image: hashicorp/consul-template
         imagePullPolicy: Always
         name: consul-template
+        resources: {}
         volumeMounts:
         - mountPath: /home/vault
           name: vault-token
@@ -102,13 +104,15 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-sandbox/abc:32e11d4-dirty-e56806a
+      - image: gcr.io/searce-sandbox/abc:307c289-dirty-cda4dd7
         name: php-apache
         ports:
         - containerPort: 80
+        resources: {}
         volumeMounts:
-        - mountPath: /var/www/html
+        - mountPath: /var/www/html/vault.html
           name: shared-data
+          subPath: vault.html
       serviceAccountName: vault-auth
       volumes:
       - emptyDir:
