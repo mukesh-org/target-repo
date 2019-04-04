@@ -104,15 +104,14 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-sandbox/abc:307c289-dirty-cda4dd7
+      - image: gcr.io/searce-sandbox/abc:6ff3942-dirty-d26af84
         name: php-apache
         ports:
         - containerPort: 80
         resources: {}
         volumeMounts:
-        - mountPath: /var/www/html/vault.html
+        - mountPath: /tmp
           name: shared-data
-          subPath: vault.html
       serviceAccountName: vault-auth
       volumes:
       - emptyDir:
