@@ -28,11 +28,23 @@ data:
     }
 kind: ConfigMap
 metadata:
+  labels:
+    cleanup: "true"
+    skaffold-builder: kaniko
+    skaffold-deployer: kustomize
+    skaffold-tag-policy: git-commit
+    tail: "true"
   name: vault-agent-config-g9cmfhmgmh
 ---
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    cleanup: "true"
+    skaffold-builder: kaniko
+    skaffold-deployer: kustomize
+    skaffold-tag-policy: git-commit
+    tail: "true"
   name: kustomize-service
 spec:
   ports:
@@ -48,6 +60,11 @@ kind: Deployment
 metadata:
   labels:
     app: kustomize-test
+    cleanup: "true"
+    skaffold-builder: kaniko
+    skaffold-deployer: kustomize
+    skaffold-tag-policy: git-commit
+    tail: "true"
   name: kustomize-test
 spec:
   replicas: 1
@@ -58,6 +75,11 @@ spec:
     metadata:
       labels:
         app: kustomize-test
+        cleanup: "true"
+        skaffold-builder: kaniko
+        skaffold-deployer: kustomize
+        skaffold-tag-policy: git-commit
+        tail: "true"
     spec:
       containers:
       - args:
@@ -104,7 +126,7 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-sandbox/abc:7dd3b7c-dirty-1ec0c11
+      - image: gcr.io/searce-sandbox/abc:flux-sync-589-gfc679c6-dirty@sha256:ec2e595502055c24c52c1e967aa55d7e415a024dd73403b46073a20b80355e55
         name: php-apache
         ports:
         - containerPort: 80
