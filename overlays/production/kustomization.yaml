@@ -88,7 +88,7 @@ spec:
         - -log-level=debug
         env:
         - name: VAULT_ADDR
-          value: https://35.222.149.11:443
+          value: https://34.66.109.120:443
         - name: VAULT_CACERT
           value: /etc/vault/tls/ca.crt
         - name: VAULT_ROLE
@@ -110,7 +110,7 @@ spec:
         - name: HOME
           value: /home/vault
         - name: VAULT_ADDR
-          value: https://35.222.149.11:443
+          value: https://34.66.109.120:443
         - name: VAULT_CACERT
           value: /etc/vault/tls/ca.crt
         image: hashicorp/consul-template
@@ -126,7 +126,7 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-playground/abc:flux-sync-643-g5e01muk-dirty@sha256:8a61d2209056bdf13c1900768b943e44f48e423770d8023d074f34cdf5623474
+      - image: gcr.io/searce-playground/abc:flux-sync-668-g09b7532-dirty@sha256:2ce47c2d04ec5a8425dc8c5c6864bb6626fc32a6fe0cf6bafca4f6a487e2e777
         name: php-apache
         ports:
         - containerPort: 80
