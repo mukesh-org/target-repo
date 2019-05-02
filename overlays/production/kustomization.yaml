@@ -126,7 +126,7 @@ spec:
           name: shared-data
         - mountPath: /etc/vault/tls
           name: vault-tls
-      - image: gcr.io/searce-playground/abc:flux-sync-692-g172719f-dirty@sha256:c20061a33f15538de7d3422df4269e23928832b4ba584d7edc6aa7df3a87d1f5
+      - image: gcr.io/searce-playground/abc:flux-sync-700-g8d3e4cf-dirty@sha256:4f2c472af788abb36c62527c548a3bc651d85b4b54eb0f0205188630b5aead7c
         name: php-apache
         ports:
         - containerPort: 80
